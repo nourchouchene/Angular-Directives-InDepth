@@ -9,4 +9,5 @@ export class AppComponent {
   oddnumbers = [1,  3,  5];
   pairnumbers = [2,4] ;
   onlyOdd = false;
+  value : number = 5 ;
 }

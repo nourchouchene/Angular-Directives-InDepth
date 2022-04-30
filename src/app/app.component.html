@@ -20,6 +20,21 @@ onlyOdd===true">
 </div> 
 
 <div 
+*appUnless="
+onlyOdd ===true">
+
+            <li
+            class="list-group-item"
+            [ngClass]="{odd: even % 2 !==0 }" 
+            [ngStyle]="{backgroundColor : even % 2 !==0 ? 'white' : 'green'}"
+  *ngFor="
+  let even of pairnumbers">
+
+             {{even}}
+
+            </li>
+   </div>
+   <div 
 *ngIf="
 onlyOdd ===false">
 
@@ -33,7 +48,8 @@ onlyOdd ===false">
              {{even}}
 
             </li>
-          </div>
+   </div>
+          
 
       </ul>
     
@@ -45,11 +61,24 @@ onlyOdd ===false">
       </p>
     </div>
   </div>
-  <div class=" container" appSuperHighlight>
+  <div class=" container" 
+  appSuperHighlight
+  [DefaultColor]="'pink'"
+  [HighlightColor]="'grey'"
+  >
     <ul color="white">
       <p>
         Hello
       </p>
     </ul>
+  </div>
+  <div [ngSwitch]="value" >
+<p  *ngSwitchCase="5">This is the beginning  </p>
+<p  *ngSwitchCase="5">Step By Step  </p>
+<p  *ngSwitchCase="5">To Be Expert Angular Developer  </p>
+
+
+
+
   </div>
 </div>

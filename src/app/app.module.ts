@@ -6,12 +6,14 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HighlightDirective } from './highlight/highlight.directive';
 import { SuperHighlightDirective } from './highlight/super-highlight.directive';
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     HighlightDirective,
-    SuperHighlightDirective
+    SuperHighlightDirective,
+    UnlessDirective
     
   ],
   imports: [
